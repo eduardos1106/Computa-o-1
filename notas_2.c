@@ -1,36 +1,40 @@
-#include <stdio.h>//colocar no code blocks para formatar certo
-int main ()
+#include <stdio.h>
+#include <locale.h>
+
+int main()
 {
-
+    setlocale(LC_ALL, "Portuguese");
     float n1, n2, n3, media;
-    int freq;//calcular a media e decidir se passa ou não considerando a frequência
+    int freq;
 
-    printf("Digite três notas separadas por espaço:");
+    printf("Digite três notas separadas por espaço: ");
     scanf("%f %f %f", &n1, &n2, &n3);
-    printf("\nDigite sua frequência entre 0 e 100 (como numero inteiro):");
+    printf("\nDigite sua frequência como um número inteiro: ");
     scanf("%d", &freq);
 
     media = (n1+n2+n3)/3;
 
-    if (media>8 && freq>75)
+    if (media>8&&freq>75)
     {
-        printf("Aprovado com distinção!");
+        printf("O estudante foi 'Aprovado com distinção' pois teve media: %f, e frequência: %d%%", media, freq);
     }
 
     else if (media>=6&&freq>75)
     {
-        printf("Aprovado direto");
-
-    }
-    else if (media<4 || media<=10&&freq<=50)
-    {
-        printf("Reprovado direto");
+        printf("O estudante foi 'Aprovado direto' pois teve media: %f, e frequência: %d%%", media, freq);
     }
 
-    else if (media<=4 && media<6 && freq<75 || media>=6 && freq<75 || media>=4 && freq<75)
+    else if(media<4 || freq<50)
     {
-        printf("Vai para final");
+        printf("O estudante foi 'Reprovado' pois teve media: %f, e frequência %d%%", media, freq);
     }
+
+    else if (media>=4&&media<6&&freq>75 || media>=6&freq<75 || media>=4&&freq>=50&&freq<75)
+    {
+        printf("O estudante 'Vai para final' pois teve media: %f, e frequência %d%%", media, freq);
+    }
+
     printf("\nAdeus!");
     return 0;
 }
+
