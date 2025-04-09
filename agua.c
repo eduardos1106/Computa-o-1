@@ -20,17 +20,17 @@ int main()
     }
     else if (metros>10&&metros<=30)
     {
-        printf("O valor a ser pago é: %d$", conta1);
+        printf("O valor a ser pago é: %d$", conta1+taxa);
     }
 
     else if (metros>30&&metros<=100)
     {
-        printf("O valor a ser pago é: %d$", conta2);
+        printf("O valor a ser pago é: %d$", conta2+taxa);
     }
 
     else
     {
-        printf("O valor a ser pago é: %d$", conta3);
+        printf("O valor a ser pago é: %d$", conta3+taxa);
     }
 
     printf("\nAdeus!");
