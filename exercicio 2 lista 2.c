@@ -18,7 +18,7 @@ int main()
             contagem++;//contagem de quantas vezes o if ocorreu 
         }
 
-        printf("\nDigite outro valor inteiro: ");
+        printf("\nDigite outro valor inteiro (digite -1000 para fechar): ");
         scanf("%d", &n);
 
     }
