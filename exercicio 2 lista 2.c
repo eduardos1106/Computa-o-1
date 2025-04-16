@@ -14,8 +14,8 @@ int main()
 
         if (n>0)
         {
-            soma = soma +n;
-            contagem++;
+            soma = soma +n;//soma de todos os numeros positivos, já sendo a soma da média
+            contagem++;//contagem de quantas vezes o if ocorreu 
         }
 
         printf("\nDigite outro valor inteiro maior que -1000: ");
