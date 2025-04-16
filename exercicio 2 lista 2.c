@@ -4,7 +4,7 @@ int main()
 {
 
     int n;
-    float soma, contagem;
+    float contagem, soma=0;
 
     printf("Digite um valor inteiro diferente de -1000 (caso contrario vai quebrar): ");
     scanf("%d", &n);
