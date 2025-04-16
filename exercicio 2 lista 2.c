@@ -3,7 +3,7 @@
 int main(){
 
 int n;
-float soma, contagem;
+float contagem, soma=0;
 
 printf("Digite um valor inteiro maior que -1000 (caso contrario vai quebrar): ");
 scanf("%d", &n);
