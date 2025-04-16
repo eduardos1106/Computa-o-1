@@ -6,10 +6,10 @@ int main()
     int n;
     float soma, contagem;
 
-    printf("Digite um valor inteiro maior que -1000 (caso contrario vai quebrar): ");
+    printf("Digite um valor inteiro diferente de -1000 (caso contrario vai quebrar): ");
     scanf("%d", &n);
 
-    while (n>-1000)
+    while (n!=1000)
     {
 
         if (n>0)
@@ -18,7 +18,7 @@ int main()
             contagem++;//contagem de quantas vezes o if ocorreu 
         }
 
-        printf("\nDigite outro valor inteiro maior que -1000: ");
+        printf("\nDigite outro valor inteiro diferente de -1000: ");
         scanf("%d", &n);
 
     }
