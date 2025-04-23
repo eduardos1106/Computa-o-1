@@ -25,6 +25,7 @@ int main()
 
     printf("\nA velocidade média em minutos por quilômetro é: %d", media1);
     printf("\nA velocidade média em segundos por quilômetro é: %d", media2);
+    printf("\n%d:%d", media1, media2);
 
     printf("\nFim do programa");
 
