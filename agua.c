@@ -1,38 +1,38 @@
 #include <stdio.h>
-#include <locale.h>
 
 int main()
 {
-    setlocale(LC_ALL, "Portuguese"); //a conta eh definida por f(x)=7+ x.valor que depende do quanto usou
 
-    int taxa = 7;
-    int metros, conta1, conta2, conta3;
-    printf("Digite qual foi a quantidade de água (em metros cúbicos) que foi utilizado no mês: ");
-    scanf("%d", &metros);
+    int taxa=7;
+    float c, valor3, valorcerto3;
+    float valor4, valorcerto4, valorcertofinal;
 
-    conta1 = metros*1;
-    conta2 = metros*2;
-    conta3 = metros*5;
+    printf("Digite o seu consumo mensal de agua (em mł): ");
+    scanf("%f", &c);
 
-    if ((metros>0&&metros<=10)||(metros==0))
+    valor3 = c - 30;
+    valorcerto3 = c - valor3;
+
+    valor4 = c-100;
+    valorcerto4 = (c - valor4) - 30;
+    valorcertofinal = (100 - valorcerto4)-10;
+
+    if ((c==0)||(c<=10))
     {
-        printf("O valor a ser pago é: %d$", taxa);
+        printf("Sua conta de agua eh: $%d", taxa);
     }
-    else if (metros>10&&metros<=30)
+    else if (c>10&&c<=30)
     {
-        printf("O valor a ser pago é: %d$", conta1+taxa);
+        printf("Sua conta de agua eh: $%.1f", taxa + c);
     }
-
-    else if (metros>30&&metros<=100)
+    else if (c>30&&c<=100)
     {
-        printf("O valor a ser pago é: %d$", conta2+taxa);
+        printf("Sua conta de agua eh: $%.1f", taxa + valor3*2 + valorcerto3);
     }
-
     else
     {
-        printf("O valor a ser pago é: %d$", conta3+taxa);
+        printf("Sua conta de agua eh: $%.1f", taxa + valor4*5 +valorcerto4*2 + valorcertofinal);
     }
-
-    printf("\nAdeus!");
+    printf("\nFim do codigo");
     return 0;
 }
