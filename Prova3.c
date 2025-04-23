@@ -24,7 +24,7 @@ int main()
         printf("\nDANO CRÍTICO MASSIVO!");
     }
 
-    else if (danototal<=5000&&danototal>1000)
+    else if (danototal>1000)
     {
         printf("\nDANO CRÍTICO!");
     }
