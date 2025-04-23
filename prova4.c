@@ -8,7 +8,7 @@ int main()
     printf("Digite o valor o qual quer calcular a tabuada: ");
     scanf("%d", &n);
 
-    for (int i=0; i<=10; i++)
+    for (int i=1; i<=10; i++)
     {
         produto = n * i;
         printf("\n%d * %d = %d", n, i, produto);
