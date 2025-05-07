@@ -20,7 +20,7 @@ int main()
     printf("Digite um ano para ver se eh bissexto: ");
     scanf("%d", &ano);
 
-    if (ehbissexto(ano)==1)
+    if (ehbissexto(ano)=1)
     {
         printf("\nO ano %d eh bissexto!", ano);
     }
