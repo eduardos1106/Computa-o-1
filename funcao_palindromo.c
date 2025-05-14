@@ -14,7 +14,7 @@ void removeExtremos(int *n, int *pri, int *ult)
         numfunction = numfunction/10;
         pot *= 10;
     }
-    *pri = *n / pot;//extrai o ultimo digito dividino por 10 elevado na quantidade de vezes que ocorreu o while
+    *pri = *n / pot;//extrai o ultimo digito dividindo por 10 elevado na quantidade de vezes que ocorreu o while
 
     *n = *n % pot;
     *n = *n / 10;//nao sei pra que serve isso, mas vou deixar
