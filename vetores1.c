@@ -5,7 +5,7 @@
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-    int i, j,n,k;
+    int i, j, n, k;
     srand(time(0));
 
     int v[N];//define o vetor
