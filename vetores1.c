@@ -35,7 +35,7 @@ void verefica(int v[],int tam)
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-    int i, j,n,k;
+    int i,j,n;
     srand(time(NULL));
 
     int v[N];//define o vetor
