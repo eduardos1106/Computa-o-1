@@ -26,9 +26,9 @@ void verefica(int v[],int tam)
         }
     }
 
-    if (n!=v[4])//define n para ser o ultimo vetor caso nao esteja nele inicialmente
+    if (n!=v[tam-1])//define n para ser o ultimo vetor caso nao esteja nele inicialmente
     {
-        v[4]=n;
+        v[tam-1]=n;
     }
 }
 
