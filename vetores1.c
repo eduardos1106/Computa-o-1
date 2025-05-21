@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
+#include <stdlib.h>
+#include <time.h>
 #define N 5
 
 void verefica(int v[],int tam)
@@ -34,13 +36,13 @@ int main()
 {
     setlocale(LC_ALL, "Portuguese");
     int i, j,n,k;
-    srand(time(0));
+    srand(time(NULL));
 
     int v[N];//define o vetor
 
     for (i=0; i<N; i++) //escolhe aleatoriamente os valores de v
     {
-        v[i]=rand()%10;
+        v[i]=rand()%100+1;
     }
 
     i=0;
