@@ -1,37 +1,32 @@
 #include <stdio.h>
 #define n 3
 
-//funciona so pra 3x3 e nao sei fazer essa merda em um so loop nada funcionada nessa bosta do krl
+//funciona so pra 3x3 e nao sei fazer em um so loop
 
 void verifica(int m[n][n], int tam)
 {
     int soma1 = 0, soma2 = 0, soma3 = 0, soma4 = 0, soma5 = 0;
 
-    // Soma da linha 0
     for (int j = 0; j < tam; j++) {
         soma1 += m[0][j];
     }
     printf("\nSOMA1 = %d", soma1);
 
-    // Soma da linha 1
     for (int j = 0; j < tam; j++) {
         soma2 += m[1][j];
     }
     printf("\nSOMA2 = %d", soma2);
 
-    // Soma da linha 2
     for (int j = 0; j < tam; j++) {
         soma3 += m[2][j];
     }
     printf("\nSOMA3 = %d", soma3);
 
-    // Soma da diagonal principal
     for (int j = 0; j < tam; j++) {
         soma4 += m[j][j];
     }
     printf("\nSOMA4 = %d", soma4);
 
-    // Soma da diagonal secundária
     for (int j = 0; j < tam; j++) {
         soma5 += m[j][tam - 1 - j];
     }
