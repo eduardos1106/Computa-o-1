@@ -4,7 +4,7 @@
 #define M 10
 #define VA 5
 
-//falta transfomar os numeros em letras mas como eh sabado eu quero mais eh que se foda 
+//falta transfomar os numeros em letras mas eu nao sei
 
 void preencheRes (int m[N][M], int l, int c)
 {
