@@ -55,6 +55,8 @@ int main() {
         i++;
     }
 
+    tentativa[strcspn(tentativa, "\n")] = '\0';
+
     while ((strcmp(nome1, tentativa) != 0) && (strcmp(nome2, tentativa) != 0) && (strcmp(nome3, tentativa) != 0)) {
         printf("Errado! Digite outro nome para advinhar: ");
         fgets(tentativa, N, stdin);
