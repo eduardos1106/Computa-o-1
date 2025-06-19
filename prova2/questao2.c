@@ -3,6 +3,8 @@
 
 void calculaEstatisticas (float valores_arquivo[], int tamanho, float *maior)
 {
+    *maior=valores_arquivo[0];
+    
     for (int i=0; i<tamanho; i++)
     {
         if (valores_arquivo[i]>*maior)
