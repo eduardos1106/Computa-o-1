@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 5
+#define N 15
 
 void calculaEstatisticas (float valores_arquivo[], int tamanho, float *maior)
 {
