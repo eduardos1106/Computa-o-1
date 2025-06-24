@@ -1,39 +1,60 @@
 #include <stdio.h>
-#define n 4
-#define o 8
+#include <stdlib.h>
+#include <time.h>
+#define N 3
+#define M 6
 
-int intercalaVetores (int v1[], int v2[], int v3[], int tam)
+void geraVetor(int vetor[],int tam)
 {
     for (int i=0; i<tam; i++)
     {
-        v3[2*i]=v1[i];
-        v3[2*i+1]=v2[i];
+        vetor[i] = rand()%10;
     }
 }
 
+void intercalaVetores(int vetor1[],int vetor2[],int vetor3[],int tam)
+{
+    for (int i=0; i<tam; i++) //posicoes par
+    {
+            vetor3[2*i] = vetor1[i];
+
+            vetor3[2*i+1] = vetor2[i];
+
+    }
+}
+
+
+
 int main()
 {
-    int v1[]= {1,2,5,4};
-    int v2[]= {2,3,7,3};
-    int v3[8];
+    srand(time(NULL));
+    int vetor1[N];
+    int vetor2[N];
+    int vetor3[N+N];
 
-    for (int i=0; i<n; i++)
+    geraVetor(vetor1,N);
+    geraVetor(vetor2,N);
+    printf("\nVetor1: ");
+    for (int i=0; i<N; i++)
     {
-        printf("\nOs valores de v1[%d] eh %d", i, v1[i]);
+        printf("\nPosicao [%d]: %d",i+1,vetor1[i]);
     }
-    print("\n");
-
-    for (int i=0; i<n; i++)
+    printf("\n");
+    printf("\nVetor2: ");
+    for (int i=0; i<N; i++)
     {
-        printf("\nOs valores de v2[%d] eh %d", i, v2[i]);
-    }
-    print("\n");
-
-    intercalaVetores(v1,v2,v3,o);
-    for (int i=0; i<o; i++)
-    {
-        printf("\nOs valores do vetor v3[%d] eh: %d", i, v3[i]);
+        printf("\nPosicao [%d]: %d",i+1,vetor2[i]);
     }
 
+    intercalaVetores(vetor1,vetor2,vetor3,M);
+    printf("\n");
+    printf("\nVetor3: ");
+    for (int i=0; i<(N+N); i++)
+    {
+        printf("\nPosicao [%d]: %d",i+1,vetor3[i]);
+    }
+
+
+    printf("\nFim do programa");
     return 0;
 }
